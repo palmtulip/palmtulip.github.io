@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日大赛推特yandex-推特每日大赛yandex搜索_大赛资讯与参与入口</title>
+<meta name="description" content="每日大赛推特yandex主题首页，汇集推特每日大赛的赛事说明、参与方式、yandex搜索入口与信息核对要点，帮助访问者快速找到当日大赛内容与操作路径。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Ccircle cx='24' cy='32' r='9' fill='%23f59e0b'/%3E%3Ccircle cx='42' cy='32' r='9' fill='%23f59e0b' opacity='0.55'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#111827;
+  --ink-soft:#374151;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --paper:#fbfaf7;
+  --card:#ffffff;
+  --amber:#d97706;
+  --amber-soft:#fef3c7;
+  --shadow:0 1px 2px rgba(17,24,39,.05),0 10px 30px rgba(17,24,39,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
+.wrap-narrow{width:min(820px,calc(100% - 40px));margin:0 auto}
+
+/* header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,250,247,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;letter-spacing:-.2px;line-height:1.3}
+.logo-mark{width:34px;height:34px;flex:0 0 auto}
+.nav{display:flex;gap:6px;flex-wrap:wrap}
+.nav a{
+  font-size:14px;color:var(--ink-soft);padding:6px 12px;border-radius:999px;
+  transition:background .18s,color .18s;
+}
+.nav a:hover{background:var(--amber-soft);color:#92400e}
+.header-cta{
+  font-size:14px;font-weight:600;color:#fff;background:var(--ink);
+  padding:8px 16px;border-radius:999px;white-space:nowrap;
+}
+.header-cta:hover{background:#000}
+
+/* hero */
+.hero{padding:64px 0 56px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:700;letter-spacing:.12em;color:#92400e;
+  background:var(--amber-soft);padding:5px 12px;border-radius:999px;margin-bottom:20px;
+}
+h1{
+  font-size:clamp(30px,4.4vw,50px);
+  line-height:1.16;
+  letter-spacing:-1.2px;
+  font-weight:850;
+  margin-bottom:20px;
+}
+h1 .hl{color:var(--amber)}
+.lede{font-size:16.5px;color:var(--ink-soft);max-width:34em;margin-bottom:28px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:15px;font-weight:650;padding:12px 22px;border-radius:999px;
+  transition:transform .15s,background .18s;
+}
+.btn-primary{background:var(--ink);color:#fff}
+.btn-primary:hover{background:#000;transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow)}
+.btn-ghost:hover{border-color:#d1d5db}
+.hero-meta{display:flex;gap:24px;margin-top:30px;flex-wrap:wrap}
+.hero-meta div{font-size:13px;color:var(--muted)}
+.hero-meta strong{display:block;font-size:20px;color:var(--ink);font-weight:800;line-height:1.3}
+
+/* hero visual */
+.hero-visual{
+  background:var(--ink);border-radius:22px;padding:26px;color:#e5e7eb;
+  box-shadow:0 24px 60px rgba(17,24,39,.22);position:relative;
+}
+.hero-visual h2{font-size:13px;letter-spacing:.1em;color:#9ca3af;font-weight:700;margin-bottom:16px}
+.feed-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.09)}
+.feed-item:last-child{border-bottom:0}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--amber);margin-top:8px;flex:0 0 auto}
+.feed-item p{font-size:13.5px;line-height:1.6;color:#d1d5db}
+.feed-item p b{color:#fff;font-weight:650}
+.tag{display:inline-block;font-size:11px;color:#fcd34d;background:rgba(245,158,11,.14);border-radius:6px;padding:1px 7px;margin-left:6px}
+
+/* sections */
+section{padding:60px 0}
+.section-head{margin-bottom:34px}
+.section-head .kicker{font-size:12.5px;font-weight:700;letter-spacing:.14em;color:var(--amber);text-transform:uppercase;margin-bottom:10px}
+h2.sec-title{font-size:clamp(22px,2.6vw,30px);letter-spacing:-.6px;line-height:1.25;font-weight:800;margin-bottom:12px}
+.section-head p{color:var(--muted);max-width:44em;font-size:15px}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.card .num{font-size:12px;font-weight:800;color:var(--amber);letter-spacing:.1em;margin-bottom:12px}
+.card h3{font-size:17px;font-weight:750;margin-bottom:10px;line-height:1.4}
+.card p{font-size:14.5px;color:var(--ink-soft);flex:1}
+.card .meta{margin-top:16px;font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:12px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;position:relative}
+.step::before{
+  counter-increment:s;content:"0" counter(s);
+  font-size:12px;font-weight:800;letter-spacing:.1em;color:#fff;
+  background:var(--ink);width:30px;height:30px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+}
+.step h3{font-size:15.5px;font-weight:750;margin-bottom:8px}
+.step p{font-size:13.5px;color:var(--ink-soft)}
+
+/* search panel */
+.search-panel{
+  background:var(--ink);color:#f3f4f6;border-radius:22px;padding:40px;
+  display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;
+}
+.search-panel h2{font-size:24px;font-weight:800;letter-spacing:-.4px;margin-bottom:12px;color:#fff}
+.search-panel p{font-size:14.5px;color:#9ca3af}
+.search-box{display:flex;gap:8px;margin-top:6px}
+.search-box input{
+  flex:1;min-width:0;background:#1f2937;border:1px solid #374151;border-radius:10px;
+  color:#fff;font-size:14.5px;padding:12px 14px;font-family:inherit;
+}
+.search-box input:focus{outline:2px solid var(--amber);outline-offset:1px}
+.search-box button{
+  background:var(--amber);color:#1c1917;border:0;border-radius:10px;
+  font-size:14.5px;font-weight:750;padding:12px 20px;cursor:pointer;font-family:inherit;
+}
+.search-box button:hover{background:#f59e0b}
+.search-hint{font-size:12.5px;color:#6b7280;margin-top:12px}
+.search-result{margin-top:14px;font-size:13.5px;color:#fcd34d;min-height:1.5em}
+
+/* detail list */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.detail-list{list-style:none;display:flex;flex-direction:column;gap:0}
+.detail-list li{padding:18px 0;border-bottom:1px solid var(--line);display:flex;gap:14px}
+.detail-list li:first-child{padding-top:0}
+.detail-list .ic{width:26px;height:26px;flex:0 0 auto;margin-top:3px}
+.detail-list h3{font-size:15.5px;font-weight:750;margin-bottom:5px}
+.detail-list p{font-size:14px;color:var(--ink-soft)}
+.prose p{font-size:15px;color:var(--ink-soft);margin-bottom:16px}
+.note{
+  background:var(--amber-soft);border-left:3px solid var(--amber);
+  border-radius:0 10px 10px 0;padding:16px 18px;font-size:14px;color:#78350f;
+}
+
+/* faq */
+.faq{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{
+  cursor:pointer;font-size:15.5px;font-weight:700;list-style:none;
+  display:flex;justify-content:space-between;gap:16px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:20px;color:var(--amber);font-weight:400;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{font-size:14.5px;color:var(--ink-soft);margin-top:12px;max-width:52em}
+
+/* cta band */
+.cta-band{
+  border:1px solid var(--line);background:#fff;border-radius:22px;
+  padding:40px;display:flex;justify-content:space-between;align-items:center;gap:28px;
+  box-shadow:var(--shadow);
+}
+.cta-band h2{font-size:23px;font-weight:800;letter-spacing:-.4px;margin-bottom:8px}
+.cta-band p{font-size:14.5px;color:var(--muted);max-width:36em}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:44px 0 36px;margin-top:20px;background:#fff}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:32px}
+.footer-grid h3{font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
+.footer-grid ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-grid a{font-size:14px;color:var(--ink-soft)}
+.footer-grid a:hover{color:var(--amber)}
+.footer-about p{font-size:14px;color:var(--muted);max-width:30em;margin-top:12px}
+.footer-bottom{
+  border-top:1px solid var(--line);padding-top:22px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:13px;color:var(--muted);
+}
+
+@media (max-width:920px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .cards{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr;gap:32px}
+  .search-panel{grid-template-columns:1fr;padding:30px}
+  .cta-band{flex-direction:column;align-items:flex-start;padding:30px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .nav{display:none}
+  .hero{padding:44px 0 40px}
+  .cards{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-meta{gap:18px}
+  section{padding:44px 0}
+  .header-cta{padding:7px 13px;font-size:13px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="每日大赛推特yandex 首页">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#111827"/>
+        <circle cx="24" cy="32" r="9" fill="#d97706"/>
+        <circle cx="42" cy="32" r="9" fill="#d97706" opacity="0.55"/>
+      </svg>
+      <span>每日大赛推特yandex</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#today">今日赛程</a>
+      <a href="#howto">参与方式</a>
+      <a href="#search">搜索入口</a>
+      <a href="#check">核对要点</a>
+      <a href="#faq">常见疑问</a>
+    </nav>
+    <a class="header-cta" href="#today">查看今日内容</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">推特 · 每日大赛 · 检索入口</span>
+        <h1>每日大赛推特<span class="hl">yandex</span></h1>
+        <p class="lede">这里是“每日大赛推特yandex”的主题首页：把推特上每日大赛的公开信息、参与步骤与 yandex 搜索方式整理在同一处，方便访问者按顺序找到当天内容、核对规则，再决定是否参与。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#today">进入今日赛程</a>
+          <a class="btn btn-ghost" href="#search">用关键词检索</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>每日</strong>按日更新节奏</div>
+          <div><strong>推特</strong>公开信息源</div>
+          <div><strong>yandex</strong>检索与核对</div>
+        </div>
+      </div>
+      <aside class="hero-visual" aria-label="信息流示意">
+        <h2>当日信息流 · 示意</h2>
+        <div class="feed-item"><span class="dot"></span><p><b>赛程条目</b>：当日主题与时间安排<span class="tag">核实</span></p></div>
+        <div class="feed-item"><span class="dot"></span><p><b>参与条件</b>：账号、话题与提交格式</p></div>
+        <div class="feed-item"><span class="dot"></span><p><b>检索线索</b>：用 yandex 查找原始推文与转述</p></div>
+        <div class="feed-item"><span class="dot"></span><p><b>结果公示</b>：以发布方公开说明为准<span class="tag">谨慎</span></p></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TODAY -->
+  <section id="today">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">今日赛程</div>
+        <h2 class="sec-title">每日大赛推特yandex 的当日信息由哪几块组成</h2>
+        <p>推特上的每日大赛通常以短帖形式分散发布，同一个活动可能出现多个转述版本。下面把访问者最常查阅的三类信息拆开说明，便于逐项对照，而不是只看一条帖子就下结论。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="num">01 / 赛程</div>
+          <h3>主题、日期与截止时间</h3>
+          <p>先确认当日赛题名称、开始与截止时间，以及时区口径。推特帖子常省略时区，需要回到发布账号的原始说明核对，避免把转述时间当成官方时间。</p>
+          <div class="meta">核对对象：发布账号原始帖</div>
+        </article>
+        <article class="card">
+          <div class="num">02 / 参与</div>
+          <h3>账号要求与提交格式</h3>
+          <p>常见要求包括指定话题标签、在推文中附带作品链接、保持账号公开等。格式细节决定内容能否被收录，提交前按条目逐项检查比事后补发更稳妥。</p>
+          <div class="meta">核对对象：规则帖正文</div>
+        </article>
+        <article class="card">
+          <div class="num">03 / 结果</div>
+          <h3>公示方式与查询路径</h3>
+          <p>结果通常由发布方在推特公布，也可能通过固定话题聚合。若看到第三方榜单，应先比对来源账号，再判断其是否具备发布资格，不把转述当作结论。</p>
+          <div class="meta">核对对象：公示帖与话题页</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO -->
+  <section id="howto" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">参与方式</div>
+        <h2 class="sec-title">围绕每日大赛推特yandex 的四步操作顺序</h2>
+        <p>把检索、核对、发布、复查分开处理，可以减少重复劳动，也便于在信息发生变化时快速定位问题出在哪一步。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>定位当日帖</h3>
+          <p>在推特搜索赛题关键词，按最新排序，优先查看发布账号本人的帖子，而不是截图或二次转述。</p>
+        </div>
+        <div class="step">
+          <h3>交叉核对</h3>
+          <p>用 yandex 检索同一赛题名称，比对多个来源的时间与规则描述，记录存在差异的字段。</p>
+        </div>
+        <div class="step">
+          <h3>按格式提交</h3>
+          <p>确认话题标签、链接位置与可见性设置后发布，保留自己推文的链接作为后续查询依据。</p>
+        </div>
+        <div class="step">
+          <h3>回看公示</h3>
+          <p>截止后在原话题下复查结果帖，若信息缺失，回到发布账号主页确认是否有补充说明。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <section id="search">
+    <div class="wrap">
+      <div class="search-panel">
+        <div>
+          <h2>用关键词查找每日大赛推特yandex 相关内容</h2>
+          <p>输入赛题名称、日期或账号名，页面会给出对应的检索建议与核对提示。搜索结果不替代原始帖，只作为定位线索。</p>
+        </div>
+        <div>
+          <form class="search-box" id="searchForm" role="search">
+            <label for="q" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">检索关键词</label>
+            <input id="q" name="q" type="search" placeholder="例如：赛题名称 / 日期 / 账号" autocomplete="off">
+            <button type="submit">检索</button>
+          </form>
+          <p class="search-hint">建议组合：赛题名 + 日期；或账号名 + 话题标签。</p>
+          <p class="search-result" id="searchResult" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECK -->
+  <section id="check" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap split">
+      <div>
+        <div class="section-head" style="margin-bottom:24px">
+          <div class="kicker">核对要点</div>
+          <h2 class="sec-title">判断一条每日大赛推特yandex 信息是否可信</h2>
+        </div>
+        <ul class="detail-list">
+          <li>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><h3>看发布主体</h3><p>确认账号是否为活动组织方或长期发布该赛事的固定账号，新注册账号的规则帖需要额外核实。</p></div>
+          </li>
+          <li>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><h3>看时间一致性</h3><p>原帖时间、截止时间与公示时间应能互相衔接，出现矛盾时以发布账号的最新说明为准。</p></div>
+          </li>
+          <li>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><h3>看规则完整度</h3><p>只写“参加即有机会”的帖子通常缺少可执行细节，完整规则应说明提交方式与评选口径。</p></div>
+          </li>
+          <li>
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><h3>看是否存在收费环节</h3><p>若转述帖引导付费报名或私下转账，应视为高风险信息，先回到原账号确认是否存在该环节。</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="prose">
+        <p>“每日大赛”在推特语境里并非单一固定赛事，不同账号可能各自发起同名活动。因此，每日大赛推特yandex 的检索结果常常同时出现多个版本，访问者需要先分清发布方，再谈参与。</p>
+        <p>yandex 在这里承担的是补充检索的角色：当推特站内搜索受限于排序或可见范围时，用外部检索可以找到被引用的帖子、存档页面或讨论串，帮助还原一条信息出现的时间顺序。</p>
+        <p>需要说明的是，本页不发布赛事结果，也不代表任何组织方。所有赛程、规则与公示内容均以发布账号的原始说明为准，本页只提供整理后的查阅顺序与核对方法。</p>
+        <div class="note">提交前请自行确认账号可见性、话题标签拼写与链接有效性。这三项是最常见的失败原因，且都能在发布前几分钟内检查完成。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap-narrow">
+      <div class="section-head">
+        <div class="kicker">常见疑问</div>
+        <h2 class="sec-title">关于每日大赛推特yandex 的检索与参与</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>为什么同一个每日大赛会出现多个时间版本？</summary>
+          <p>不同账号转述时容易省略时区或沿用旧版规则。遇到这种情况，先找发布方原始帖，再以该帖时间为准，其余版本仅作参考。</p>
+        </details>
+        <details>
+          <summary>用 yandex 检索时应该输入什么？</summary>
+          <p>建议使用“赛题名称 + 日期”或“账号名 + 话题标签”的组合。单一宽泛词会带出大量无关内容，组合词更容易定位到具体帖子。</p>
+        </details>
+        <details>
+          <summary>没有推特账号还能查看内容吗？</summary>
+          <p>部分公开帖在未登录状态下仍可浏览，但可见范围会随平台策略变化。若无法查看，可尝试通过外部检索找到被引用的片段，再判断是否需要登录。</p>
+        </details>
+        <details>
+          <summary>本页会公布比赛结果吗？</summary>
+          <p>不会。本页是主题整理页面，结果以发布账号的公示帖为准。若公示信息缺失，建议直接在该账号的评论区或后续帖子中查找补充说明。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>准备好今天的查阅顺序</h2>
+          <p>从当日赛程开始，按核对要点逐项确认，再用检索入口补齐缺失信息。整个流程不依赖第三方榜单。</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#today">回到今日赛程</a>
+          <a class="btn btn-ghost" href="#howto">查看参与四步</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="logo" href="#top" aria-label="每日大赛推特yandex 返回顶部">
+          <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#111827"/>
+            <circle cx="24" cy="32" r="9" fill="#d97706"/>
+            <circle cx="42" cy="32" r="9" fill="#d97706" opacity="0.55"/>
+          </svg>
+          <span>每日大赛推特yandex</span>
+        </a>
+        <p>整理推特每日大赛的公开信息与 yandex 检索路径，提供赛程查阅、参与核对与结果查询的操作顺序。内容以发布方原始说明为准。</p>
+      </div>
+      <div>
+        <h3>页面栏目</h3>
+        <ul>
+          <li><a href="#today">今日赛程</a></li>
+          <li><a href="#howto">参与方式</a></li>
+          <li><a href="#search">搜索入口</a></li>
+          <li><a href="#check">核对要点</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>相关入口</h3>
+        <ul>
+          <li><a href="https://x.com" target="_blank" rel="noopener noreferrer">推特（X）</a></li>
+          <li><a href="https://yandex.com" target="_blank" rel="noopener noreferrer">yandex 搜索</a></li>
+          <li><a href="#faq">常见疑问</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>每日大赛推特yandex · 主题信息整理页</span>
+      <span>内容仅供查阅参考，赛事规则与结果以发布账号说明为准。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form=document.getElementById('searchForm');
+  var input=document.getElementById('q');
+  var out=document.getElementById('searchResult');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=(input.value||'').trim();
+    if(!v){
+      out.textContent='请输入赛题名称、日期或账号名后再检索。';
+      return;
+    }
+    out.textContent='检索线索：“'+v+'” — 建议在推特搜索该词并按最新排序，同时在 yandex 以“'+v+' + 每日大赛”组合核对原始帖。';
+  });
+})();
+</script>
+</body>
+</html>
