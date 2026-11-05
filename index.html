@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今日海角大陆回家方式-海角大陆回家路线_返乡通道与出行指引</title>
+<meta name="description" content="今日海角大陆回家方式主题首页，汇总海角大陆回家路线、返乡通道、出行节点与通行提示，帮助访问者快速了解今日海角大陆回家方式的核心信息与操作路径。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3b4c'/%3E%3Cpath d='M32 12l18 30H14z' fill='%23f2b64b'/%3E%3Ccircle cx='32' cy='46' r='6' fill='%23e86a4f'/%3E%3C/svg%3E">
+<style>
+:root{
+  --deep:#0f3b4c;
+  --deep-2:#14495e;
+  --ink:#1d2b31;
+  --muted:#5b707a;
+  --sand:#f6f1e7;
+  --sand-2:#efe6d6;
+  --amber:#f2b64b;
+  --coral:#e86a4f;
+  --line:#dcd3c2;
+  --white:#fffdf8;
+  --radius:16px;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--sand);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(15,59,76,.97);
+  color:#eaf2f5;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(6px);
+}
+.header-inner{
+  display:flex;align-items:center;gap:18px;
+  min-height:64px;flex-wrap:wrap;
+  padding-top:8px;padding-bottom:8px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.logo-mark{width:36px;height:36px;flex:0 0 auto}
+.logo-text{
+  font-size:16px;font-weight:700;letter-spacing:.5px;
+  color:#fff;white-space:nowrap;
+}
+.main-nav{
+  display:flex;gap:6px;flex-wrap:wrap;
+  margin-left:auto;
+}
+.main-nav a{
+  font-size:14px;padding:7px 12px;border-radius:999px;
+  color:#cfe1e8;transition:background .2s,color .2s;
+}
+.main-nav a:hover,.main-nav a:focus-visible{
+  background:rgba(242,182,75,.18);color:#fff;outline:none;
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(1100px 420px at 82% -10%, rgba(242,182,75,.22), transparent 60%),
+    linear-gradient(160deg,var(--deep) 0%,var(--deep-2) 62%,#0b2f3d 100%);
+  color:#eaf2f5;
+  padding:52px 0 58px;
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(242,182,75,.6),transparent);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:2px;
+  color:var(--amber);text-transform:uppercase;
+  border:1px solid rgba(242,182,75,.45);
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+h1{
+  font-size:clamp(26px,4vw,42px);
+  line-height:1.28;margin:0 0 16px;
+  font-weight:800;letter-spacing:.5px;color:#fff;
+}
+.hero-lead{
+  font-size:15.5px;color:#c9dde5;margin:0 0 26px;max-width:52ch;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14.5px;font-weight:600;
+  padding:12px 22px;border-radius:999px;
+  border:1px solid transparent;cursor:pointer;
+  transition:transform .18s,box-shadow .18s,background .18s;
+}
+.btn-primary{background:var(--amber);color:#25313a;box-shadow:0 8px 20px rgba(242,182,75,.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(242,182,75,.34)}
+.btn-ghost{border-color:rgba(255,255,255,.32);color:#eaf2f5}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn[aria-disabled="true"]{cursor:default}
+.hero-note{font-size:12.5px;color:#9fb9c4;margin-top:14px}
+
+.hero-figure{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius);
+  padding:18px;
+}
+.hero-figure svg{width:100%;height:auto}
+.figure-cap{
+  font-size:12.5px;color:#a9c3ce;margin-top:10px;text-align:center;letter-spacing:.5px;
+}
+
+/* ---------- quick strip ---------- */
+.quick{
+  background:var(--white);
+  border-bottom:1px solid var(--line);
+}
+.quick-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  padding:0;
+}
+.quick-item{
+  padding:20px 18px;border-right:1px solid var(--line);
+}
+.quick-item:last-child{border-right:none}
+.quick-k{
+  font-size:12px;letter-spacing:1.5px;color:var(--muted);
+  text-transform:uppercase;margin-bottom:6px;
+}
+.quick-v{font-size:15px;font-weight:700;color:var(--deep)}
+
+/* ---------- sections ---------- */
+section{padding:56px 0}
+.sec-head{max-width:62ch;margin-bottom:30px}
+.sec-tag{
+  display:inline-block;font-size:12px;letter-spacing:2px;
+  color:var(--coral);font-weight:700;margin-bottom:10px;
+}
+h2{
+  font-size:clamp(21px,2.6vw,28px);
+  margin:0 0 12px;line-height:1.35;color:var(--deep);font-weight:800;
+}
+.sec-head p{margin:0;color:var(--muted);font-size:15px}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px 22px;
+  display:flex;flex-direction:column;gap:10px;
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(15,59,76,.09);border-color:#c9bda6}
+.card-ico{
+  width:42px;height:42px;border-radius:12px;
+  background:var(--sand-2);display:grid;place-items:center;
+}
+.card h3{font-size:16.5px;margin:0;color:var(--deep);font-weight:700}
+.card p{margin:0;font-size:14.5px;color:var(--muted)}
+.card-meta{
+  margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);
+  font-size:12.5px;color:#8a7f6c;letter-spacing:.4px;
+}
+
+/* route table */
+.route-panel{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;
+}
+.route-row{
+  display:grid;grid-template-columns:150px 1fr 170px;
+  gap:16px;padding:16px 22px;border-bottom:1px solid var(--line);
+  font-size:14.5px;align-items:baseline;
+}
+.route-row:last-child{border-bottom:none}
+.route-row.head{
+  background:var(--sand-2);font-size:12.5px;letter-spacing:1.5px;
+  color:var(--muted);font-weight:700;text-transform:uppercase;
+}
+.route-name{font-weight:700;color:var(--deep)}
+.route-desc{color:var(--muted)}
+.route-state{font-size:13px;color:var(--coral);font-weight:600;text-align:right}
+
+/* split */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:start}
+.prose p{font-size:15px;color:#33454d;margin:0 0 16px}
+.prose strong{color:var(--deep)}
+.checklist{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.checklist li{
+  display:flex;gap:12px;font-size:14.5px;color:#33454d;
+  background:var(--white);border:1px solid var(--line);
+  border-radius:12px;padding:14px 16px;
+}
+.checklist .dot{
+  flex:0 0 auto;width:22px;height:22px;border-radius:50%;
+  background:var(--sand-2);color:var(--deep);
+  display:grid;place-items:center;font-size:12px;font-weight:800;
+}
+
+/* faq */
+.faq{display:grid;gap:14px;max-width:860px}
+details{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:12px;padding:0 20px;
+}
+details[open]{border-color:#c9bda6;box-shadow:0 10px 22px rgba(15,59,76,.06)}
+summary{
+  cursor:pointer;list-style:none;padding:16px 0;
+  font-size:15px;font-weight:700;color:var(--deep);
+  display:flex;justify-content:space-between;gap:16px;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";font-size:18px;color:var(--coral);font-weight:400;line-height:1;
+  transition:transform .2s;
+}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 18px;font-size:14.5px;color:var(--muted)}
+
+/* footer */
+.site-footer{
+  background:var(--deep);color:#b9cfd8;padding:40px 0 26px;margin-top:20px;
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-brand .logo-text{font-size:15px}
+.site-footer p{font-size:13.5px;margin:0;color:#9fb9c4;max-width:42ch}
+.footer-col h4{
+  font-size:12.5px;letter-spacing:2px;color:var(--amber);
+  text-transform:uppercase;margin:0 0 12px;font-weight:700;
+}
+.footer-col ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.footer-col a{font-size:13.5px;color:#b9cfd8}
+.footer-col a:hover{color:#fff}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);
+  margin-top:30px;padding-top:16px;
+  font-size:12.5px;color:#83a1ad;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .hero-figure{order:2}
+  .cards{grid-template-columns:1fr 1fr}
+  .split{grid-template-columns:1fr;gap:24px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .route-row{grid-template-columns:120px 1fr;gap:8px}
+  .route-state{grid-column:1/-1;text-align:left}
+  .route-row.head{display:none}
+}
+@media (max-width:640px){
+  .main-nav{width:100%;margin-left:0;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}
+  .main-nav a{white-space:nowrap;font-size:13px;padding:6px 10px}
+  .quick-grid{grid-template-columns:1fr 1fr}
+  .quick-item{border-right:none;border-bottom:1px solid var(--line)}
+  .quick-item:nth-child(odd){border-right:1px solid var(--line)}
+  .quick-item:nth-last-child(-n+2){border-bottom:none}
+  .cards{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  section{padding:40px 0}
+  .hero{padding:36px 0 42px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="今日海角大陆回家方式 首页">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#14495e"/>
+        <path d="M32 12l18 30H14z" fill="#f2b64b"/>
+        <circle cx="32" cy="46" r="6" fill="#e86a4f"/>
+      </svg>
+      <span class="logo-text">今日海角大陆回家方式</span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#routes">回家路线</a>
+      <a href="#steps">出行步骤</a>
+      <a href="#nodes">通行节点</a>
+      <a href="#tips">注意事项</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">返乡 · 路线 · 指引</span>
+        <h1>今日海角大陆回家方式</h1>
+        <p class="hero-lead">把“怎么回家”拆成可执行的几步：先确认路线方向，再核对通行节点，最后按当日提示出发。本页整理今日海角大陆回家方式的核心信息，帮助你在一屏之内找到入口与判断依据。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#routes">查看回家路线</a>
+          <a class="btn btn-ghost" href="#steps">出行步骤</a>
+        </div>
+        <p class="hero-note">提示：具体通行状态以当日现场与官方发布为准，本页仅作路线整理与阅读参考。</p>
+      </div>
+      <div class="hero-figure">
+        <svg viewBox="0 0 360 240" role="img" aria-label="回家路线示意插画：从海角出发经过节点抵达大陆">
+          <defs>
+            <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1d5b73"/>
+              <stop offset="1" stop-color="#0d3140"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="360" height="240" rx="12" fill="url(#sea)"/>
+          <circle cx="292" cy="52" r="20" fill="#f2b64b" opacity=".9"/>
+          <path d="M0 168c40-16 70 10 110 2s70-24 110-12 60 20 140 6v76H0z" fill="#0a2733" opacity=".85"/>
+          <path d="M0 186c46-12 74 8 116 0s68-20 108-10 62 18 136 4v60H0z" fill="#081e28"/>
+          <!-- island -->
+          <path d="M60 150c14-22 40-24 52-6 10 16-6 30-26 30s-34-10-26-24z" fill="#e9dcc3" opacity=".95"/>
+          <!-- mainland -->
+          <path d="M236 156c18-26 62-28 82-6 18 20-6 38-36 38s-58-14-46-32z" fill="#e9dcc3" opacity=".95"/>
+          <!-- dashed route -->
+          <path d="M104 146C150 120 190 122 236 150" fill="none" stroke="#f2b64b" stroke-width="3" stroke-dasharray="7 7" stroke-linecap="round"/>
+          <circle cx="104" cy="146" r="6" fill="#e86a4f"/>
+          <circle cx="236" cy="150" r="6" fill="#e86a4f"/>
+          <circle cx="170" cy="126" r="4.5" fill="#fffdf8"/>
+          <text x="52" y="120" font-size="11" fill="#cfe1e8" font-family="sans-serif">海角</text>
+          <text x="262" y="120" font-size="11" fill="#cfe1e8" font-family="sans-serif">大陆</text>
+        </svg>
+        <p class="figure-cap">回家路线示意：海角出发 → 通行节点 → 大陆方向</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="quick">
+    <div class="wrap quick-grid">
+      <div class="quick-item">
+        <div class="quick-k">路线方向</div>
+        <div class="quick-v">海角 → 大陆</div>
+      </div>
+      <div class="quick-item">
+        <div class="quick-k">关键环节</div>
+        <div class="quick-v">节点通行核对</div>
+      </div>
+      <div class="quick-item">
+        <div class="quick-k">出发前</div>
+        <div class="quick-v">确认当日提示</div>
+      </div>
+      <div class="quick-item">
+        <div class="quick-k">阅读方式</div>
+        <div class="quick-v">先路线后细节</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="routes">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">01 · 回家路线</span>
+        <h2>今日海角大陆回家方式的路线分类</h2>
+        <p>回家方式不是单一选项，而是一组可对照的路径。下面按通行形态归类，方便你先把方向定下来，再去看具体节点。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-ico" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f3b4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l9-11 9 11"/><path d="M7 17h10"/></svg>
+          </div>
+          <h3>主通道回家</h3>
+          <p>沿主通道方向行进，是今日海角大陆回家方式中最常被采用的形态。特点是路径连续、节点清晰，适合优先核对通行时段。</p>
+          <div class="card-meta">适用：希望路线稳定、少折返</div>
+        </article>
+        <article class="card">
+          <div class="card-ico" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f3b4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M6 15.6V9h7l3 4h2"/></svg>
+          </div>
+          <h3>分段接驳回家</h3>
+          <p>把全程拆成几段，段与段之间在节点衔接。理解今日海角大陆回家方式时，分段思路能降低单点拥堵带来的影响。</p>
+          <div class="card-meta">适用：节点间距较长、需要换乘</div>
+        </article>
+        <article class="card">
+          <div class="card-ico" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0f3b4c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M7 8l5-5 5 5"/><path d="M5 21h14"/></svg>
+          </div>
+          <h3>错峰回家</h3>
+          <p>调整出发时间，避开集中时段。这也是今日海角大陆回家方式里成本较低的一种调整手段，重点是提前看提示、留出余量。</p>
+          <div class="card-meta">适用：时间可灵活安排</div>
+        </article>
+      </div>
+
+      <div class="route-panel" style="margin-top:22px">
+        <div class="route-row head">
+          <span>路线</span><span>说明</span><span>核对要点</span>
+        </div>
+        <div class="route-row">
+          <span class="route-name">主通道</span>
+          <span class="route-desc">连续方向明确，沿途节点较少绕行。</span>
+          <span class="route-state">先看通行时段</span>
+        </div>
+        <div class="route-row">
+          <span class="route-name">分段接驳</span>
+          <span class="route-desc">在中间节点完成衔接，注意换乘间隔。</span>
+          <span class="route-state">预留衔接时间</span>
+        </div>
+        <div class="route-row">
+          <span class="route-name">错峰出行</span>
+          <span class="route-desc">避开集中出发时段，减少等待。</span>
+          <span class="route-state">关注当日提示</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="steps" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">02 · 出行步骤</span>
+        <h2>按四步走完今日海角大陆回家方式</h2>
+        <p>把路线落到行动上，顺序比速度更重要。以下四步覆盖从出发前到抵达后的关键判断。</p>
+      </div>
+      <div class="split">
+        <div class="prose">
+          <p><strong>第一步，确认方向。</strong>先明确自己处在海角一侧的哪个位置，再判断前往大陆方向应走哪条主通道，这是理解今日海角大陆回家方式的前提。</p>
+          <p><strong>第二步，核对节点。</strong>把沿途需要经过的节点列出来，逐个看是否开放、是否需要等待。节点信息比路线名称更能影响实际耗时。</p>
+          <p><strong>第三步，安排时间。</strong>根据节点情况倒推出发时间，宁可早到等候，也不要把余量压到最后一刻。今日海角大陆回家方式的稳妥做法，是给衔接留出缓冲。</p>
+          <p><strong>第四步，抵达确认。</strong>到达大陆方向后，确认后续接续方式，再结束本次行程。整条链路走通，才算完成一次完整的回家过程。</p>
+        </div>
+        <ul class="checklist">
+          <li><span class="dot">1</span><span>出发前查看当日通行提示，确认路线方向未变。</span></li>
+          <li><span class="dot">2</span><span>列出途经节点，标记需要换乘或等待的位置。</span></li>
+          <li><span class="dot">3</span><span>为每个衔接点预留时间，避免连续压缩行程。</span></li>
+          <li><span class="dot">4</span><span>抵达后确认接续方式，保留返程信息备查。</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="nodes">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">03 · 通行节点</span>
+        <h2>回家路上会遇到的几类节点</h2>
+        <p>节点是今日海角大陆回家方式里最需要留意的部分。它们不改变方向，却决定节奏。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <h3>出发节点</h3>
+          <p>位于海角一侧，是整段行程的起点。出发节点的主要作用是确认方向与时间，避免一开始就走错分支。</p>
+          <div class="card-meta">关注：方向确认、出发时段</div>
+        </article>
+        <article class="card">
+          <h3>衔接节点</h3>
+          <p>位于路线中段，承担换乘与等待。衔接节点最能体现今日海角大陆回家方式的差别：同样的路线，衔接顺不顺，耗时差别明显。</p>
+          <div class="card-meta">关注：换乘间隔、等待时长</div>
+        </article>
+        <article class="card">
+          <h3>抵达节点</h3>
+          <p>位于大陆方向，是行程的落点。抵达节点之后还需要安排接续，因此不宜把全部注意力都放在“到达”本身。</p>
+          <div class="card-meta">关注：接续方式、后续安排</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="tips" style="background:var(--sand-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">04 · 注意事项</span>
+        <h2>出发前值得再看一遍的提醒</h2>
+        <p>以下内容不替代现场判断，但能帮助你在执行今日海角大陆回家方式时少走弯路。</p>
+      </div>
+      <div class="split">
+        <div class="prose">
+          <p><strong>信息以当日为准。</strong>通行状态、开放时段与衔接安排都可能随当天情况调整，前一天看到的结论，出发前应再确认一次。</p>
+          <p><strong>路线宜简不宜繁。</strong>在今日海角大陆回家方式的选择上，能少一次换乘就少一次；每增加一个衔接点，就多一份等待的不确定性。</p>
+          <p><strong>时间为先，速度为后。</strong>很多人把注意力放在“走多快”，实际更需要的是“留多少”。把缓冲时间写进行程表，比临时加速更有效。</p>
+        </div>
+        <ul class="checklist">
+          <li><span class="dot">✓</span><span>出发前复核当日提示，确认路线与节点状态。</span></li>
+          <li><span class="dot">✓</span><span>尽量减少换乘次数，优先选择衔接少的路径。</span></li>
+          <li><span class="dot">✓</span><span>为每个衔接点预留缓冲，避免行程首尾相压。</span></li>
+          <li><span class="dot">✓</span><span>抵达后先确认接续，再安排后续事项。</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">05 · 常见问题</span>
+        <h2>关于今日海角大陆回家方式的问答</h2>
+        <p>把访问者最常问的几点集中在这里，便于快速定位答案。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>今日海角大陆回家方式主要看哪一项信息？</summary>
+          <p>先看路线方向是否与当日一致，再看途经节点的通行情况。方向决定走哪条路，节点决定要花多久，两者合起来才是完整的判断依据。</p>
+        </details>
+        <details>
+          <summary>主通道和分段接驳怎么选？</summary>
+          <p>如果希望路线连续、少折返，优先主通道；如果节点间距较长或需要换乘，分段接驳更清楚。无论选哪种，都应把衔接时间算进总行程。</p>
+        </details>
+        <details>
+          <summary>为什么强调错峰？</summary>
+          <p>集中出发会把等待挤压在同一时段。错峰不改变路线，只调整时间，是今日海角大陆回家方式中改动最小、执行成本较低的一种安排。</p>
+        </details>
+        <details>
+          <summary>本页的路线信息能直接作为出行依据吗？</summary>
+          <p>本页用于整理路线结构与步骤，帮助你理清思路。实际通行状态请以当日现场与官方发布为准，本页不作通行承诺。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#14495e"/>
+            <path d="M32 12l18 30H14z" fill="#f2b64b"/>
+            <circle cx="32" cy="46" r="6" fill="#e86a4f"/>
+          </svg>
+          <span class="logo-text">今日海角大陆回家方式</span>
+        </div>
+        <p>围绕海角与大陆之间的返乡路线，整理方向、节点与步骤，帮助访问者快速理解今日海角大陆回家方式并形成自己的出行计划。</p>
+      </div>
+      <div class="footer-col">
+        <h4>页面导航</h4>
+        <ul>
+          <li><a href="#routes">回家路线</a></li>
+          <li><a href="#steps">出行步骤</a></li>
+          <li><a href="#nodes">通行节点</a></li>
+          <li><a href="#tips">注意事项</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>相关阅读</h4>
+        <ul>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#top">返回顶部</a></li>
+          <li><a href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none">下载</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>今日海角大陆回家方式 · 路线整理与阅读参考</span>
+      <span>通行状态以当日现场与官方发布为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
