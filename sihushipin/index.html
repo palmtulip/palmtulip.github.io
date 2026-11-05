@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>四虎视频-四虎视频在线观看_四虎视频网页版入口_高清影视资源</title>
+<meta name="description" content="四虎视频主题首页，介绍四虎视频的页面定位、内容分区与访问方式，帮助访客快速找到四虎视频的在线观看入口、网页版导航与常见问题说明。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2318181f'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23ff5a3c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#18181f;
+  --ink-2:#2b2b36;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --line:#e2ded4;
+  --muted:#6b6a72;
+  --brand:#ff5a3c;
+  --brand-deep:#c93a22;
+  --gold:#e6b04a;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(24,24,31,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px 0;
+}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;flex-shrink:0}
+.brand-mark{
+  width:38px;height:38px;border-radius:11px;
+  background:linear-gradient(140deg,var(--brand),var(--brand-deep));
+  display:grid;place-items:center;
+  box-shadow:0 6px 16px rgba(255,90,60,.35);
+}
+.brand-mark svg{width:18px;height:18px}
+.brand-name{font-size:19px;font-weight:800;letter-spacing:.5px;white-space:nowrap}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{
+  color:#d7d5cd;font-size:14px;font-weight:500;
+  padding:8px 12px;border-radius:9px;transition:.2s;
+}
+.nav a:hover{background:rgba(255,255,255,.1);color:#fff}
+.nav a.cta{
+  background:var(--brand);color:#fff;font-weight:700;
+  box-shadow:0 4px 14px rgba(255,90,60,.4);
+}
+.nav a.cta:hover{background:#ff7154}
+@media(max-width:760px){
+  .header-inner{flex-direction:column;align-items:flex-start;gap:10px}
+  .nav{width:100%;gap:2px}
+  .nav a{font-size:13px;padding:7px 10px}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(900px 420px at 85% -10%,rgba(255,90,60,.28),transparent 65%),
+    radial-gradient(700px 420px at 5% 110%,rgba(230,176,74,.16),transparent 60%),
+    var(--ink);
+  color:#fff;
+  padding:56px 0 60px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);
+}
+.hero-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:44px;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:30px}}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:600;letter-spacing:1.5px;
+  color:var(--gold);text-transform:uppercase;
+  border:1px solid rgba(230,176,74,.4);
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+h1{
+  font-size:clamp(30px,5vw,50px);
+  font-weight:900;line-height:1.18;letter-spacing:1px;
+  margin-bottom:18px;
+}
+h1 .accent{
+  color:var(--brand);
+  text-shadow:0 6px 26px rgba(255,90,60,.4);
+}
+.hero-lead{font-size:16px;color:#c8c6bf;max-width:34em;margin-bottom:26px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:12px;
+  font-weight:700;font-size:15px;transition:.2s;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 22px rgba(255,90,60,.38)}
+.btn-primary:hover{background:#ff7154;transform:translateY(-1px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.28);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.hero-facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px}
+.fact strong{display:block;font-size:22px;font-weight:800;color:#fff}
+.fact span{font-size:12.5px;color:#9c9a94;letter-spacing:.4px}
+
+/* hero card */
+.hero-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:20px;padding:22px;
+  backdrop-filter:blur(6px);
+}
+.hero-card h2{font-size:15px;font-weight:700;color:#fff;margin-bottom:14px;letter-spacing:.5px}
+.hero-card ul{list-style:none;display:grid;gap:12px}
+.hero-card li{
+  display:flex;gap:12px;align-items:flex-start;
+  font-size:13.5px;color:#c8c6bf;line-height:1.6;
+}
+.dot{
+  flex-shrink:0;width:22px;height:22px;border-radius:7px;
+  background:rgba(255,90,60,.18);color:var(--brand);
+  display:grid;place-items:center;font-size:11px;font-weight:800;margin-top:1px;
+}
+
+/* ---------- section base ---------- */
+section{padding:64px 0}
+@media(max-width:760px){section{padding:44px 0}}
+.sec-head{margin-bottom:34px;max-width:46em}
+.sec-tag{
+  font-size:12.5px;font-weight:700;letter-spacing:2px;
+  color:var(--brand-deep);text-transform:uppercase;margin-bottom:10px;
+}
+h2.sec-title{font-size:clamp(22px,3.2vw,31px);font-weight:800;line-height:1.3;letter-spacing:.5px}
+.sec-desc{margin-top:12px;color:var(--muted);font-size:15px}
+
+/* ---------- entry cards ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.grid-3{grid-template-columns:1fr}}
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px;
+  transition:.22s;
+  display:flex;flex-direction:column;gap:10px;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(24,24,31,.09);border-color:#d3cec2}
+.card-icon{
+  width:44px;height:44px;border-radius:12px;
+  background:linear-gradient(140deg,#fff0ec,#ffd9d1);
+  display:grid;place-items:center;color:var(--brand-deep);
+}
+.card h3{font-size:17px;font-weight:800;letter-spacing:.3px}
+.card p{font-size:14px;color:var(--muted);line-height:1.7;flex:1}
+.card-link{
+  font-size:13.5px;font-weight:700;color:var(--brand-deep);
+  display:inline-flex;align-items:center;gap:5px;
+}
+.card-link:hover{color:var(--brand)}
+
+/* ---------- guide / split ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:860px){.split{grid-template-columns:1fr;gap:28px}}
+.prose p{font-size:15px;color:#3d3c45;margin-bottom:14px;line-height:1.85}
+.prose p:last-child{margin-bottom:0}
+.prose strong{color:var(--ink);font-weight:700}
+.steps{display:grid;gap:14px;counter-reset:step}
+.step{
+  display:flex;gap:16px;align-items:flex-start;
+  background:var(--card);border:1px solid var(--line);
+  border-radius:14px;padding:18px 20px;
+}
+.step-num{
+  flex-shrink:0;width:30px;height:30px;border-radius:9px;
+  background:var(--ink);color:#fff;font-weight:800;font-size:14px;
+  display:grid;place-items:center;
+}
+.step h4{font-size:15.5px;font-weight:800;margin-bottom:4px}
+.step p{font-size:13.5px;color:var(--muted);line-height:1.65}
+
+/* ---------- table / list ---------- */
+.panel{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;
+}
+.panel-head{
+  padding:18px 24px;border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.panel-head h3{font-size:16.5px;font-weight:800}
+.badge{
+  font-size:12px;font-weight:700;color:var(--brand-deep);
+  background:#fff0ec;padding:4px 10px;border-radius:999px;
+}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:14px 24px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-size:12.5px;letter-spacing:.6px;color:var(--muted);font-weight:700;background:#faf8f3;text-transform:uppercase}
+td:first-child{font-weight:700;color:var(--ink)}
+tr:last-child td{border-bottom:0}
+@media(max-width:620px){
+  th,td{padding:12px 16px;font-size:13px}
+  .table-scroll{overflow-x:auto}
+  .table-scroll table{min-width:520px}
+}
+
+/* ---------- faq ---------- */
+.faq{display:grid;gap:12px}
+details{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:14px;padding:0 22px;
+  transition:.2s;
+}
+details[open]{border-color:#d3cec2;box-shadow:0 8px 22px rgba(24,24,31,.06)}
+summary{
+  list-style:none;cursor:pointer;padding:18px 30px 18px 0;
+  font-size:15.5px;font-weight:700;position:relative;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);
+  font-size:20px;font-weight:400;color:var(--brand);line-height:1;
+}
+details[open] summary::after{content:"–"}
+details p{font-size:14px;color:var(--muted);line-height:1.8;padding:0 0 18px}
+
+/* ---------- download strip ---------- */
+.dl{
+  background:linear-gradient(120deg,var(--ink),#2c2c38);
+  color:#fff;border-radius:20px;padding:34px 36px;
+  display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;
+}
+.dl h3{font-size:20px;font-weight:800;margin-bottom:6px}
+.dl p{font-size:14px;color:#b6b4ad;max-width:38em}
+.btn-dl{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--gold);color:#26200f;font-weight:800;font-size:15px;
+  padding:13px 26px;border-radius:12px;
+  pointer-events:none;opacity:.92;
+}
+.dl-note{font-size:12px;color:#8f8d87;margin-top:8px}
+
+/* ---------- footer ---------- */
+.site-footer{
+  background:var(--ink);color:#a9a7a0;
+  padding:44px 0 30px;font-size:13.5px;
+}
+.footer-top{
+  display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;
+  padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:22px;
+}
+.footer-brand{max-width:34em}
+.footer-brand .brand{margin-bottom:12px}
+.footer-brand p{font-size:13px;line-height:1.8;color:#8f8d87}
+.footer-links{display:flex;gap:34px;flex-wrap:wrap;font-size:13px}
+.footer-links h4{color:#fff;font-size:13.5px;font-weight:700;margin-bottom:10px;letter-spacing:.5px}
+.footer-links ul{list-style:none;display:grid;gap:7px}
+.footer-links a:hover{color:var(--brand)}
+.copyright{font-size:12.5px;color:#75736d;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="四虎视频 首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5l11 6.5-11 6.5z" fill="#fff"/></svg>
+      </span>
+      <span class="brand-name">四虎视频</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#entry">观看入口</a>
+      <a href="#guide">使用指南</a>
+      <a href="#detail">栏目说明</a>
+      <a href="#faq">常见问题</a>
+      <a class="cta" href="#entry">立即进入</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-h1">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">主题首页 · 在线观看导航</span>
+        <h1 id="hero-h1">四虎视频</h1>
+        <p class="hero-lead">
+          四虎视频是一个面向影视观看需求的页面主题入口。本页把四虎视频的观看入口、网页版访问方式、
+          栏目分区与常见问题整理在同一处，帮助访客先了解结构，再按需进入对应内容。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#entry">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5l11 6.5-11 6.5z"/></svg>
+            进入四虎视频入口
+          </a>
+          <a class="btn btn-ghost" href="#guide">查看使用指南</a>
+        </div>
+        <div class="hero-facts">
+          <div class="fact"><strong>4</strong><span>核心内容分区</span></div>
+          <div class="fact"><strong>网页版</strong><span>免安装访问</span></div>
+          <div class="fact"><strong>高清</strong><span>画质期望说明</span></div>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="四虎视频访问要点">
+        <h2>访问前先了解</h2>
+        <ul>
+          <li><span class="dot">1</span><span>四虎视频以在线观看为主，无需下载客户端即可打开页面。</span></li>
+          <li><span class="dot">2</span><span>页面分区按“入口—指南—栏目—问答”顺序排列，便于逐层浏览。</span></li>
+          <li><span class="dot">3</span><span>遇到无法播放时，可先刷新页面，再更换浏览器尝试。</span></li>
+          <li><span class="dot">4</span><span>本页为四虎视频主题介绍与导航页，具体片源以实际页面为准。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ENTRY -->
+  <section id="entry" aria-labelledby="entry-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">观看入口</div>
+        <h2 class="sec-title" id="entry-title">四虎视频的主要访问方式</h2>
+        <p class="sec-desc">按设备与使用习惯划分三条路径，访客可先判断自己属于哪一类，再选择对应入口。</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>电脑网页版</h3>
+          <p>在桌面浏览器中直接打开四虎视频页面，适合大屏观看与多标签对照，无需安装任何插件。</p>
+          <a class="card-link" href="#guide">查看电脑端说明 →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg>
+          </div>
+          <h3>手机浏览器访问</h3>
+          <p>移动端页面以单列排布，标题与播放区域优先展示，适合通勤、碎片时间浏览四虎视频内容。</p>
+          <a class="card-link" href="#guide">查看移动端说明 →</a>
+        </article>
+
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <h3>栏目直达</h3>
+          <p>按栏目说明定位影片分类，四虎视频的内容分区在本页下半部分有逐项解释，可先阅读再跳转。</p>
+          <a class="card-link" href="#detail">查看栏目说明 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide" style="background:#efece4" aria-labelledby="guide-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">使用指南</div>
+        <h2 class="sec-title" id="guide-title">第一次访问四虎视频，按这四步走</h2>
+        <p class="sec-desc">把访问流程拆成可执行的小步骤，减少反复试错的时间成本。</p>
+      </div>
+
+      <div class="split">
+        <div class="prose">
+          <p>
+            <strong>四虎视频</strong>的页面结构并不复杂，但对初次到访的用户来说，先看清入口位置比急着点击更重要。
+            建议从页面顶部导航开始，依次经过“观看入口—使用指南—栏目说明—常见问题”，
+            这样能在几分钟内建立起对四虎视频整体内容布局的认识。
+          </p>
+          <p>
+            观看体验受网络环境影响较大。同一部影片在不同时间段可能表现不同，若加载缓慢，
+            可以暂停后重新播放，或切换到其他浏览器再试。四虎视频的页面本身不要求注册即可浏览，
+            但部分功能是否可用，取决于实际页面的当前状态。
+          </p>
+          <p>
+            需要提醒的是，本页是围绕四虎视频整理的主题介绍与导航页，负责说明结构与访问方式，
+            并不直接托管片源。具体可看内容、清晰度与更新节奏，请以实际打开的页面信息为准。
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">1</span>
+            <div><h4>确认设备与网络</h4><p>电脑或手机均可访问，建议使用较新版本浏览器，并保持网络稳定。</p></div>
+          </div>
+          <div class="step">
+            <span class="step-num">2</span>
+            <div><h4>从导航进入入口</h4><p>点击顶部“观看入口”，选择与自身设备匹配的那一条路径。</p></div>
+          </div>
+          <div class="step">
+            <span class="step-num">3</span>
+            <div><h4>按栏目筛选内容</h4><p>先看栏目说明，再决定看哪一类，避免在大量条目中盲目翻找。</p></div>
+          </div>
+          <div class="step">
+            <span class="step-num">4</span>
+            <div><h4>遇到问题查问答</h4><p>播放异常先刷新，仍无改善再看常见问题区的处理建议。</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAIL TABLE -->
+  <section id="detail" aria-labelledby="detail-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">栏目说明</div>
+        <h2 class="sec-title" id="detail-title">四虎视频内容分区一览</h2>
+        <p class="sec-desc">下表说明各分区承担的功能与适合的访问场景，便于按目的直接定位。</p>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h3>分区与用途对照</h3>
+          <span class="badge">结构说明</span>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr><th>分区</th><th>主要功能</th><th>适合场景</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>推荐区</td><td>集中展示近期更新的影片条目</td><td>没有明确目标，想先随便看看</td></tr>
+              <tr><td>分类区</td><td>按类型、地区等维度组织内容</td><td>已有偏好，需要快速缩小范围</td></tr>
+              <tr><td>播放区</td><td>承载影片播放与画质切换</td><td>已选定影片，进入观看状态</td></tr>
+              <tr><td>说明区</td><td>提供使用提示与常见问题</td><td>访问受阻，需要排查原因</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section aria-labelledby="dl-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="dl">
+        <div>
+          <h3 id="dl-title">四虎视频页面说明文档</h3>
+          <p>包含本页栏目结构、访问流程与常见问题的整理版本，便于离线查阅。文件仍在准备中，正式地址发布后可下载。</p>
+          <div class="dl-note">当前版本：整理中 · 发布后此处将替换为真实下载地址</div>
+        </div>
+        <a class="btn-dl" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M6.5 10.5L12 16l5.5-5.5M4 20h16"/></svg>
+          下载
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:#efece4" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">常见问题</div>
+        <h2 class="sec-title" id="faq-title">关于四虎视频的常见疑问</h2>
+        <p class="sec-desc">整理访问过程中最常被问到的几类情况，先看答案再操作，能省下不少时间。</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>四虎视频需要注册账号才能观看吗？</summary>
+          <p>本页以浏览与导航为主，不设置注册环节。实际观看页面是否需要登录，取决于该页面当前的功能设定，建议以打开后的提示为准。</p>
+        </details>
+        <details>
+          <summary>手机上看四虎视频，页面显示不全怎么办？</summary>
+          <p>先确认浏览器是否为较新版本，再尝试横竖屏切换或刷新。移动端采用单列布局，若仍出现错位，可更换浏览器内核后重新访问。</p>
+        </details>
+        <details>
+          <summary>页面加载慢或者播放卡顿，如何排查？</summary>
+          <p>常见原因包括网络波动、浏览器缓存过多以及同时开启的标签页太多。可依次尝试刷新页面、清理缓存、关闭多余标签，再重新打开四虎视频页面。</p>
+        </details>
+        <details>
+          <summary>四虎视频的内容会持续更新吗？</summary>
+          <p>更新节奏由实际页面决定，本页无法代为承诺具体频率。建议在访问时先查看推荐区与分类区的排序，通常较新的条目会优先展示。</p>
+        </details>
+        <details>
+          <summary>本页与四虎视频是什么关系？</summary>
+          <p>本页是围绕“四虎视频”这一主题制作的介绍与导航首页，用于说明访问方式、栏目结构与常见问题，不托管影片文件，也不代表具体片源的运营方。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5l11 6.5-11 6.5z" fill="#fff"/></svg>
+          </span>
+          <span class="brand-name">四虎视频</span>
+        </a>
+        <p>四虎视频主题首页，整理观看入口、使用指南、栏目说明与常见问题，帮助访客快速理解页面结构并按需访问。</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>页面导航</h4>
+          <ul>
+            <li><a href="#entry">观看入口</a></li>
+            <li><a href="#guide">使用指南</a></li>
+            <li><a href="#detail">栏目说明</a></li>
+            <li><a href="#faq">常见问题</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>相关说明</h4>
+          <ul>
+            <li><a href="#guide">网页版访问方式</a></li>
+            <li><a href="#detail">内容分区对照</a></li>
+            <li><a href="#faq">播放问题排查</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>四虎视频 · 主题介绍与导航页</span>
+      <span>内容以实际页面为准，本页不托管影片文件</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
