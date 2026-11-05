@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>成免费网站-免费建站平台_零成本搭建网站_自助建站工具</title>
+<meta name="description" content="成免费网站是一个面向个人与小微团队的免费建站平台，提供自助搭建网站、在线编辑、模板选用与发布上线的完整路径，帮助你理解成免费网站能做什么、怎么用、适合谁。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Cpath d='M9 11h14v3H9zM9 17h9v3H9z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --brand:#2563eb;
+  --brand-dark:#1d4ed8;
+  --brand-soft:#eff4ff;
+  --ink:#101828;
+  --ink-2:#475467;
+  --line:#e4e9f2;
+  --bg:#f7f9fc;
+  --radius:14px;
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+
+/* 页头 */
+header.site{
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.3px;color:var(--ink);white-space:nowrap}
+.logo .mark{width:34px;height:34px;flex:none;border-radius:9px;background:linear-gradient(135deg,#2563eb,#38bdf8);display:grid;place-items:center}
+.nav-links{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.nav-links a{padding:8px 12px;border-radius:9px;font-size:14.5px;color:var(--ink-2)}
+.nav-links a:hover{background:var(--brand-soft);color:var(--brand-dark)}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:6px;background:var(--brand);color:#fff;
+  padding:9px 16px;border-radius:10px;font-size:14.5px;font-weight:600;white-space:nowrap;
+}
+.nav-cta:hover{background:var(--brand-dark)}
+
+/* 首屏 */
+.hero{padding:56px 0 48px;background:
+  radial-gradient(900px 380px at 88% -10%,#e0ecff 0%,rgba(224,236,255,0) 70%),
+  linear-gradient(180deg,#fff 0%,var(--bg) 100%);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:7px;background:var(--brand-soft);color:var(--brand-dark);
+  font-size:13px;font-weight:600;padding:5px 12px;border-radius:999px;margin-bottom:16px}
+h1{font-size:clamp(30px,4.2vw,44px);line-height:1.22;font-weight:800;letter-spacing:-.5px}
+.hero p.lead{margin-top:16px;font-size:16.5px;color:var(--ink-2);max-width:36em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;border-radius:11px;
+  font-size:15px;font-weight:600;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--brand);color:#fff}
+.btn-primary:hover{background:var(--brand-dark)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:#c3cfe2;color:var(--brand-dark)}
+.btn[aria-disabled="true"]{background:#eef2f8;color:#667085;border-color:var(--line);pointer-events:none}
+.hero-meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:22px;font-size:13.5px;color:var(--ink-2)}
+.hero-meta span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:#22c55e;flex:none}
+
+/* 首屏视觉 */
+.hero-visual{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;
+  box-shadow:0 18px 44px -26px rgba(37,99,235,.45)}
+.vs-bar{display:flex;gap:6px;margin-bottom:14px}
+.vs-bar i{width:9px;height:9px;border-radius:50%;background:#dbe3ef;display:block}
+.vs-bar i:first-child{background:#fca5a5}
+.vs-bar i:nth-child(2){background:#fcd34d}
+.vs-bar i:nth-child(3){background:#86efac}
+.vs-block{height:10px;border-radius:6px;background:#eef2f9;margin-bottom:9px}
+.vs-block.w70{width:70%}
+.vs-block.w45{width:45%}
+.vs-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.vs-card{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fbfcff}
+.vs-card b{display:block;font-size:12.5px;color:var(--brand-dark);margin-bottom:4px}
+.vs-card span{font-size:11.5px;color:#7a8699;line-height:1.5}
+
+/* 通用区块 */
+section{padding:56px 0}
+.sec-head{max-width:660px;margin-bottom:30px}
+.sec-head h2{font-size:clamp(22px,2.6vw,28px);font-weight:800;letter-spacing:-.3px}
+.sec-head p{margin-top:10px;color:var(--ink-2);font-size:15.5px}
+.eyebrow{font-size:13px;font-weight:700;color:var(--brand);letter-spacing:1px;margin-bottom:8px}
+
+/* 三步 */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.step .num{width:32px;height:32px;border-radius:9px;background:var(--brand-soft);color:var(--brand-dark);
+  display:grid;place-items:center;font-weight:800;font-size:14px;margin-bottom:14px}
+.step h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.step p{font-size:14.5px;color:var(--ink-2)}
+
+/* 能力卡片 */
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cap{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:10px}
+.cap .ico{width:38px;height:38px;border-radius:10px;background:var(--brand-soft);display:grid;place-items:center}
+.cap h3{font-size:16.5px;font-weight:700}
+.cap p{font-size:14.5px;color:var(--ink-2);flex:1}
+.cap .tag-line{font-size:12.5px;color:var(--brand-dark);font-weight:600}
+
+/* 适合谁 */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.fit-list{list-style:none;display:grid;gap:14px}
+.fit-list li{display:flex;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+.fit-list .ico{flex:none;width:34px;height:34px;border-radius:9px;background:var(--brand-soft);display:grid;place-items:center}
+.fit-list b{display:block;font-size:15px;margin-bottom:3px}
+.fit-list span{font-size:14px;color:var(--ink-2)}
+.fit-note{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.fit-note h3{font-size:17px;font-weight:700;margin-bottom:12px}
+.fit-note p{font-size:14.5px;color:var(--ink-2);margin-bottom:12px}
+.fit-note p:last-child{margin-bottom:0}
+.quote{margin-top:18px;border-left:3px solid var(--brand);padding:2px 0 2px 14px;color:var(--ink-2);font-size:14px}
+
+/* 问答 */
+.faq{display:grid;gap:12px;max-width:820px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px}
+details[open]{border-color:#c9d8f5}
+summary{cursor:pointer;font-weight:700;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--brand);font-weight:700}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;font-size:14.5px;color:var(--ink-2)}
+
+/* 收束 */
+.closing{background:linear-gradient(135deg,#1e3a8a,#2563eb);color:#fff;border-radius:20px;padding:44px 36px;
+  display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+.closing h2{font-size:clamp(21px,2.5vw,27px);font-weight:800;letter-spacing:-.3px}
+.closing p{margin-top:12px;color:#dbe7ff;font-size:15px;max-width:40em}
+.closing .btn-primary{background:#fff;color:var(--brand-dark)}
+.closing .btn-primary:hover{background:#eef4ff}
+.closing .actions{display:flex;flex-direction:column;gap:12px}
+.closing .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.closing .btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff}
+.closing .btn[aria-disabled="true"]{background:rgba(255,255,255,.16);color:#e7eeff;border-color:rgba(255,255,255,.3)}
+
+/* 页尾 */
+footer.site{border-top:1px solid var(--line);background:#fff;padding:34px 0 26px;margin-top:8px}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:flex-start}
+.foot-brand{max-width:360px}
+.foot-brand .logo{margin-bottom:10px}
+.foot-brand p{font-size:13.5px;color:var(--ink-2)}
+.foot-cols{display:flex;gap:52px;flex-wrap:wrap}
+.foot-cols h4{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:10px;letter-spacing:.4px}
+.foot-cols a{display:block;font-size:13.5px;color:var(--ink-2);padding:3px 0}
+.foot-cols a:hover{color:var(--brand-dark)}
+.foot-bottom{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;
+  justify-content:space-between;gap:10px;font-size:12.5px;color:#7a8699}
+
+@media (max-width:900px){
+  .hero-grid,.fit,.closing{grid-template-columns:1fr}
+  .hero-visual{order:2}
+  .steps,.caps{grid-template-columns:1fr 1fr}
+  .closing{padding:32px 24px}
+}
+@media (max-width:640px){
+  .nav{height:auto;padding:12px 0;flex-wrap:wrap;row-gap:10px}
+  .nav-links{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}
+  .nav-links a{white-space:nowrap;font-size:14px}
+  .logo{font-size:16.5px}
+  .hero{padding:36px 0 34px}
+  .hero p.lead{font-size:15.5px}
+  .steps,.caps{grid-template-columns:1fr}
+  section{padding:40px 0}
+  .foot-cols{gap:28px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="成免费网站 首页">
+      <span class="mark" aria-hidden="true">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="16" rx="3"></rect>
+          <path d="M3 9h18M7 13h6"></path>
+        </svg>
+      </span>
+      成免费网站
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#how">搭建流程</a>
+      <a href="#caps">平台能力</a>
+      <a href="#fit">适合人群</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="nav-cta" href="#start">开始搭建</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag"><span class="dot" aria-hidden="true"></span>免费建站 · 在线编辑 · 一键发布</span>
+        <h1>成免费网站</h1>
+        <p class="lead">成免费网站面向个人创作者、小微团队与副业项目，把“想做一个网站”拆成选模板、改内容、发布上线三步。不需要先买服务器，也不需要写代码，先把站点跑起来，再决定要不要投入更多。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#start">免费开始搭建</a>
+          <a class="btn btn-ghost" href="#how">看看怎么用</a>
+        </div>
+        <div class="hero-meta">
+          <span><span class="dot" aria-hidden="true"></span>在线编辑，无需本地环境</span>
+          <span><span class="dot" aria-hidden="true"></span>模板可选，内容随时修改</span>
+          <span><span class="dot" aria-hidden="true"></span>发布后获得可访问链接</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="vs-bar"><i></i><i></i><i></i></div>
+        <div class="vs-block w70"></div>
+        <div class="vs-block w45"></div>
+        <div class="vs-cards">
+          <div class="vs-card"><b>选择模板</b><span>按用途挑一个起点版式</span></div>
+          <div class="vs-card"><b>编辑内容</b><span>改文字、换图、调栏目</span></div>
+          <div class="vs-card"><b>发布上线</b><span>生成链接，随时再改</span></div>
+          <div class="vs-card"><b>持续维护</b><span>内容更新不用重建站</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三步 -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">搭建流程</div>
+        <h2>用成免费网站，三步把页面做出来</h2>
+        <p>免费建站最怕流程绕。成免费网站把主要动作压缩为三步，每一步都能看到结果，做完一步再进下一步。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>选一个模板</h3>
+          <p>按用途选择起点：个人介绍、作品展示、活动页或小团队主页。模板决定基本版式，后续栏目顺序和文字都可以调整。</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>填内容并调整</h3>
+          <p>在编辑界面里改标题、正文、图片与链接，不需要处理代码。先写清“你是谁、提供什么、怎么联系”，这三块往往最有用。</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>发布并持续更新</h3>
+          <p>发布后站点拥有可访问地址，之后仍可回来修改内容。成免费网站适合边上线边迭代，不必等所有细节都想完。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 能力 -->
+  <section id="caps" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">平台能力</div>
+        <h2>成免费网站能帮你做哪些事</h2>
+        <p>免费不等于只能看不能用。以下是成免费网站在建站过程中承担的具体工作，方便你判断它是否匹配自己的项目。</p>
+      </div>
+      <div class="caps">
+        <div class="cap">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"></path><path d="M4 9h16M9 9v10"></path></svg>
+          </span>
+          <h3>页面结构与栏目</h3>
+          <p>提供常用区块：标题、正文、图片、按钮、列表与联系方式。按阅读顺序排列内容，避免一屏堆满信息。</p>
+          <span class="tag-line">适合：介绍页 / 作品页</span>
+        </div>
+        <div class="cap">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg>
+          </span>
+          <h3>在线编辑内容</h3>
+          <p>文字与图片在浏览器中直接修改，保存后即时生效。修改不破坏版式，也不必重新搭建整个页面。</p>
+          <span class="tag-line">适合：频繁更新内容</span>
+        </div>
+        <div class="cap">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M8 12h8M12 8v8"></path></svg>
+          </span>
+          <h3>发布与访问链接</h3>
+          <p>完成后发布，获得可直接分享的站点地址。链接可放进社交简介、名片或文档，让访问者一次看全信息。</p>
+          <span class="tag-line">适合：对外展示</span>
+        </div>
+        <div class="cap">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"></path></svg>
+          </span>
+          <h3>内容优先的版式</h3>
+          <p>字号、行长与留白按阅读习惯设置，手机上自动收窄排列。成免费网站把可读性放在装饰之前。</p>
+          <span class="tag-line">适合：长文与说明</span>
+        </div>
+        <div class="cap">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v4l3 2"></path></svg>
+          </span>
+          <h3>低门槛起步</h3>
+          <p>先做出可访问的第一版，再决定是否补充栏目、替换图片或扩展内容。成免费网站鼓励小步上线。</p>
+          <span class="tag-line">适合：第一次建站</span>
+        </div>
+        <div class="cap">
+          <span class="ico" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v6c0 4-3.5 7-8 8-4.5-1-8-4-8-8V7z"></path><path d="M9 12l2 2 4-4"></path></svg>
+          </span>
+          <h3>基础可用性</h3>
+          <p>页面适配桌面与手机浏览，导航与按钮位置清晰。内容结构清楚，访问者能快速找到联系方式与关键信息。</p>
+          <span class="tag-line">适合：多端分享</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 适合谁 -->
+  <section id="fit">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">适合人群</div>
+        <h2>谁更适合用成免费网站</h2>
+        <p>成免费网站不是万能的。它更偏向“内容型、展示型、轻量维护”的站点，以下场景匹配度较高。</p>
+      </div>
+      <div class="fit">
+        <ul class="fit-list">
+          <li>
+            <span class="ico" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path></svg></span>
+            <div><b>个人创作者</b><span>需要一个固定地址放简介、作品和联系方式，不想为几页内容单独维护服务器。</span></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"><path d="M3 20h18M6 20V9l6-5 6 5v11"></path></svg></span>
+            <div><b>小微团队与副业项目</b><span>先做一版能对外说明“在做什么、怎么合作”的页面，等需求明确后再扩展。</span></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"></path><path d="M4 10h16"></path></svg></span>
+            <div><b>活动与临时页面</b><span>报名说明、日程安排、参与方式集中在一页，发布后把链接发出去即可。</span></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"><path d="M12 4v16M4 12h16"></path></svg></span>
+            <div><b>第一次建站的人</b><span>想先理解“网站由哪些部分组成”，用成免费网站走一遍流程比看教程更直接。</span></div>
+          </li>
+        </ul>
+
+        <aside class="fit-note">
+          <h3>开始之前，先想清三件事</h3>
+          <p><b>一、站点目标。</b>是让人了解你，还是让人完成一次报名或联系？目标决定首页第一屏放什么。</p>
+          <p><b>二、内容来源。</b>把已有的自我介绍、作品图、常见问题整理好，再进编辑器，返工会更少。</p>
+          <p><b>三、维护频率。</b>如果内容长期不变，一次搭好即可；如果常更新，优先选择容易修改的版式。</p>
+          <p class="quote">成免费网站的价值在于把“做一个网站”的门槛降到可以先动手，而不是让每一页都做到完美。</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 问答 -->
+  <section id="faq" style="background:#fff;border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">常见问题</div>
+        <h2>关于成免费网站的常见疑问</h2>
+        <p>下面几条来自第一次接触免费建站时最常被问到的问题，回答只涉及页面能实际支撑的范围。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>成免费网站需要会写代码吗？</summary>
+          <p>不需要。内容在浏览器中直接编辑，模板提供基本版式，你负责文字、图片和栏目顺序。若之后需要更复杂的定制，再考虑其他方案。</p>
+        </details>
+        <details>
+          <summary>做好的页面能改吗？</summary>
+          <p>可以。发布后仍能回来修改文字与图片，修改保存后重新发布即可。建议先上线一版，再根据访问反馈调整内容重点。</p>
+        </details>
+        <details>
+          <summary>手机上看起来会乱吗？</summary>
+          <p>页面按响应式方式排布，窄屏下卡片改为单列、导航收拢、字号与行距适配小屏。发布后建议用手机实际打开检查一遍。</p>
+        </details>
+        <details>
+          <summary>适合放很长的内容吗？</summary>
+          <p>适合说明型、介绍型的长文，但建议分段并加小标题。若内容以大量文章列表为主，应评估栏目组织方式是否够用。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 收束 -->
+  <section id="start">
+    <div class="wrap">
+      <div class="closing">
+        <div>
+          <h2>从一页开始，用成免费网站把想法放到网上</h2>
+          <p>不必等域名、服务器和设计稿都准备好。先选模板、填内容、发布链接，把成免费网站当成第一版站点的工作台，再按需要补充细节。</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#how">查看搭建流程</a>
+          <a class="btn btn-ghost" href="#caps">了解平台能力</a>
+          <a class="btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="logo" href="#top">
+          <span class="mark" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="16" rx="3"></rect>
+              <path d="M3 9h18M7 13h6"></path>
+            </svg>
+          </span>
+          成免费网站
+        </a>
+        <p>成免费网站是一个面向个人与小微团队的免费建站入口，围绕选模板、在线编辑与发布上线提供清晰路径。</p>
+      </div>
+      <div class="foot-cols">
+        <div>
+          <h4>页面导航</h4>
+          <a href="#how">搭建流程</a>
+          <a href="#caps">平台能力</a>
+          <a href="#fit">适合人群</a>
+          <a href="#faq">常见问题</a>
+        </div>
+        <div>
+          <h4>开始使用</h4>
+          <a href="#start">开始搭建</a>
+          <a href="#top">返回顶部</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 成免费网站 · 主题首页</span>
+      <span>免费建站 · 在线编辑 · 页面发布</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
